@@ -1,4 +1,4 @@
-package atm;
+package test;
 public class Euro {
 
 
