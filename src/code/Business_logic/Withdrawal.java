@@ -2,8 +2,10 @@ package code.Business_logic;
 // Withdrawal.java
 // Represents a withdrawal ATM transaction
 
-import code.BankDatabase;
-import code.Screen;
+import code.Database.BankDatabase;
+import code.GUI.CashDispenser;
+import code.GUI.Keypad;
+import code.GUI.Screen;
 
 public class Withdrawal extends Transaction
 {
@@ -51,13 +53,13 @@ public class Withdrawal extends Transaction
                bankDatabase.getAvailableBalance( getAccountNumber() );
       
             // check whether the user has enough money in the account 
-            if ( amount <= availableBalance )
+            if ( new Euro(amount).minoreDi(availableBalance) )
             {   
                // check whether the cash dispenser has enough money
                if ( cashDispenser.isSufficientCashAvailable( amount ) )
                {
                   // update the account involved to reflect withdrawal
-                  bankDatabase.debit( getAccountNumber(), amount );
+                  bankDatabase.debit( getAccountNumber(), new Euro(amount) );
                   
                   cashDispenser.dispenseCash( amount ); // dispense cash
                   cashDispensed = true; // cash was dispensed

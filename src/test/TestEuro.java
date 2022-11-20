@@ -12,7 +12,8 @@ import code.Business_logic.Euro;
 
 public class TestEuro {
 
-    Euro testEuro1, testEuro2;
+    Euro testEuro1;
+    Euro testEuro2;
     
     @Before
     public void initTest() {

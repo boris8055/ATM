@@ -1,4 +1,4 @@
-package code;
+package code.GUI;
 import code.Business_logic.Euro;
 
 // Screen.java

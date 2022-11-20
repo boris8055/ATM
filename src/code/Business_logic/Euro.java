@@ -11,7 +11,10 @@ public class Euro {
 			valore = euro*100 - cent;
 		}
 	}
-
+//Create a cast from int to Euro
+public Euro(int i) {
+	valore = i*100;
+}
 	public Euro(double d) {
 		valore = (long)(d*100);
 	}
@@ -46,3 +49,4 @@ public class Euro {
 		return (double)valore/100 +" euro";
 	}
 }
+
