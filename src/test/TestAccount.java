@@ -35,13 +35,26 @@ public class TestAccount {
 
     @Test
     public void testDebit() {
-        Euro euro = new Euro(200.0);
-        account.debit(euro);
-        long availableBalance = 3800 * 100;
-        long totalBalance = 4300 * 100;
-        assertEquals("addebito su availableBalance è fallito", account.getAvailableBalance().getValore(),
-                availableBalance);
-        assertEquals("addebito su totalBalance è fallito", account.getTotalBalance().getValore(), totalBalance);
+        account.debit(new Euro(500.0));
+
+        assertEquals(350000,account.getAvailableBalance().getValore());
+        assertEquals(400000,account.getTotalBalance().getValore());
     }
+
+    @Test
+    public void testGetAccountNumber() {
+        assertEquals(54013, account.getAccountNumber());
+    }
+
+    @Test
+    public void testGetAvailableBalance() {
+        assertEquals(400000, account.getAvailableBalance().getValore());
+    }
+
+    @Test
+    public void testGetTotalBalance() {
+        assertEquals(450000, account.getTotalBalance().getValore());
+    }
+
 
 }
