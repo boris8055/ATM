@@ -1,4 +1,4 @@
-package code;
+package code.GUI;
 import code.Business_logic.Euro;
 
 // Screen.java
@@ -21,7 +21,8 @@ public class Screen
    // display a dollar amount
    public void displayDollarAmount( Euro amount )
    {
-      System.out.printf( "$%,.2f", amount.stampa() );   
+      //System.out.printf( "$%,.2f");   
+      System.out.println(amount.stampa());
    } // end method displayDollarAmount 
 } // end class Screen
 

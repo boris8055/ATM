@@ -1,7 +1,10 @@
-import code.BankDatabase;
-import code.DepositSlot;
-import code.Screen;
 package code.Database;
+
+import code.GUI.CashDispenser;
+import code.GUI.DepositSlot;
+import code.GUI.Keypad;
+import code.GUI.Screen;
+
 import code.Business_logic.BalanceInquiry;
 import code.Business_logic.Deposit;
 import code.Business_logic.Transaction;

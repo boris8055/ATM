@@ -1,8 +1,8 @@
-package code;
+package code.Database;
 // BankDatabase.java
 // Represents the bank account information database 
 import code.Business_logic.Euro;
-import code.Database.Account;
+
 
 public class BankDatabase
 {
@@ -12,9 +12,9 @@ public class BankDatabase
    public BankDatabase()
    {
       accounts = new Account[ 2 ]; // just 2 accounts for testing
-      accounts[ 0 ] = new Account( 12345, 54321, 1000.0, 1200.0 );
-      accounts[ 1 ] = new Account( 98765, 56789, 200.0, 200.0 );  
-   } // end no-argument BankDatabase constructor
+      accounts[ 0 ] = new Account(54013, 12345,new Euro(4000.00), new Euro(4500.00));
+      accounts[ 1 ] = new Account( 98765, 56789, new Euro(200.00) ,new Euro(250.00));  
+   } // end no-argument BankDatabase constructor12
    
    // retrieve Account object containing specified account number
    private Account getAccount( int accountNumber )

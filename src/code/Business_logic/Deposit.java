@@ -1,8 +1,9 @@
 package code.Business_logic;
 
-import code.BankDatabase;
-import code.DepositSlot;
-import code.Screen;
+import code.Database.BankDatabase;
+import code.GUI.DepositSlot;
+import code.GUI.Keypad;
+import code.GUI.Screen;
 
 // Deposit.java
 // Represents a deposit ATM transaction
@@ -12,7 +13,7 @@ public class Deposit extends Transaction
    private Euro amount; // amount to deposit
    private Keypad keypad; // reference to keypad
    private DepositSlot depositSlot; // reference to deposit slot
-   private final static int CANCELED = 0; // constant for cancel option
+   private final static Euro CANCELED = new Euro(0); // constant for cancel option
 
    // Deposit constructor
    public Deposit( int userAccountNumber, Screen atmScreen, 
@@ -81,7 +82,7 @@ public class Deposit extends Transaction
       int input = keypad.getInput(); // receive input of deposit amount
       
       // check whether the user canceled or entered a valid amount
-      if ( input == CANCELED ) 
+      if ( new Euro(input) == CANCELED ) 
          return CANCELED;
       else
       {

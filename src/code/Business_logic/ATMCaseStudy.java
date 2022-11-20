@@ -2,6 +2,8 @@ package code.Business_logic;
 // ATMCaseStudy.java
 // Driver program for the ATM case study
 
+import code.Database.ATM;
+
 public class ATMCaseStudy
 {
    // main method creates and runs the ATM

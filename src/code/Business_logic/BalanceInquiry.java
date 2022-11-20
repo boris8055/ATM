@@ -2,8 +2,8 @@ package code.Business_logic;
 // BalanceInquiry.java
 // Represents a balance inquiry ATM transaction
 
-import code.BankDatabase;
-import code.Screen;
+import code.Database.BankDatabase;
+import code.GUI.Screen;
 
 public class BalanceInquiry extends Transaction
 {
@@ -18,7 +18,7 @@ public class BalanceInquiry extends Transaction
    public void execute()
    {
       // get references to bank database and screen
-      BankDatabase bankDatabase = getBankDatabase();
+      final BankDatabase bankDatabase = getBankDatabase();
       Screen screen = getScreen();
 
       // get the available balance for the account involved
