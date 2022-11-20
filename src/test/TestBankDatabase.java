@@ -31,26 +31,4 @@ public class TestBankDatabase {
         assertFalse(bankdatabase.authenticateUser(54013, 12345));
     }
 
-    @Test
-    public void testAuthenticateUser() {
-        assertTrue(bankdatabase.authenticateUser(54013, 12345));
-    }
-
-    @Test
-    public void testCredit() {
-        Euro euro = new Euro(200.0);
-        bankdatabase.credit(54013, euro);
-        long totalBalance = 1400 * 100;
-        assertEquals(bankdatabase.getTotalBalance(54013).getValore(), totalBalance);
-    }
-
-    @Test
-    public void testDebit() {
-        Euro euro = new Euro(200.0);
-        bankdatabase.debit(54013, euro);
-        long availableBalance = 800 * 100;
-        long totalBalance = 1000 * 100;
-        assertEquals(bankdatabase.getAvailableBalance(54013).getValore(), availableBalance);
-        assertEquals(bankdatabase.getTotalBalance(54013).getValore(), totalBalance);
-    }
-}
+   

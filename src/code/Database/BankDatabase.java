@@ -1,4 +1,4 @@
-package code;
+package code.Database;
 // BankDatabase.java
 // Represents the bank account information database 
 import code.Business_logic.Euro;
