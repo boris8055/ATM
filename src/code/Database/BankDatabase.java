@@ -12,7 +12,7 @@ public class BankDatabase
    public BankDatabase()
    {
       accounts = new Account[ 2 ]; // just 2 accounts for testing
-      accounts[ 0 ] = new Account(54013, 12345,new Euro(4000.00), new Euro(4500.00));
+      accounts[ 0 ] = new Account(12345, 54321,new Euro(4000.00), new Euro(4500.00));
       accounts[ 1 ] = new Account( 98765, 56789, new Euro(200.00) ,new Euro(250.00));  
    } // end no-argument BankDatabase constructor12
    
